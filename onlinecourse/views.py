@@ -11,7 +11,7 @@ import logging
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
 # Create your views here.
-
+from .models import Course, Enrollment, Question, Choice, Submission
 
 def registration_request(request):
     context = {}
@@ -110,7 +110,7 @@ def enroll(request, course_id):
          # Collect the selected choices from exam form
          # Add each selected choice object to the submission object
          # Redirect to show_exam_result with the submission id
-#def submit(request, course_id):
+def submit(request, course_id):
 
 
 # An example method to collect the selected choices from the exam form from the request object
